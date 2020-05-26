@@ -1,0 +1,50 @@
+﻿@using SignalRClientMVC.Models
+@model ChatModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h1>Index</h1>
+@*@using (Html.BeginForm("SendMessage", "Home", FormMethod.Post, new { id = "ChatOne" }))
+    {*@
+<div class="row">
+    <div class="col-2">Group</div>
+    <div class="col-4"><input type="text" id="groupInput" value="Ateam"/></div>
+</div>
+<div class="row">
+    <div class="col-2">User</div>
+    <div class="col-4">
+        @Html.TextBoxFor(model => Model.User, new { @maxlength = "30" })
+    </div>
+</div>
+<div class="row">
+    <div class="col-2">For</div>
+    <div class="col-4"><input type="text" id="forUserInput" /></div>
+</div>
+<div class="row">
+    <div class="col-2">Message</div>
+    <div class="col-4">
+        @Html.TextBoxFor(model => Model.Message, new { @maxlength = "100" })
+    </div>
+</div>
+<div>
+    @*<button onclick="location.href='@Url.Action("GetMessage", "Home")';return false;" id="getButton" value="get Message">Get Messages</button>*@
+    <input type="button" id="JoinButton" value="Join Group" />
+    <input type="button" id="LeaveButton" value="Leave Group" />
+    <button type="submit" id="sendButton" value="Send Message">Send Message</button>
+    <input type="button" id="sendGroupButton" value="Send Group Message" />
+</div>
+@*}*@
+
+<div class="row">
+    <div class="col-12">
+        <hr />
+    </div>
+</div>
+<div class="row">
+    <div class="col-6">
+        <ul id="messagesList"></ul>
+    </div>
+</div>
+<script src="~/js/signalr/dist/browser/signalr.js"></script>
+<script src="~/js/chat.js"></script>

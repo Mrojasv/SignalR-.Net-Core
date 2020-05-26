@@ -1,0 +1,42 @@
+﻿@page
+    <div class="container">
+        <div class="row">&nbsp;</div>
+        <div class="row">
+            <div class="col-2">Group</div>
+            <div class="col-4"><input type="text" id="groupInput" value="Ateam"/></div>
+        </div>
+        <div class="row">
+            <div class="col-2">User</div>
+            <div class="col-4"><input type="text" id="userInput" value="Person 1"/></div>
+        </div>
+        <div class="row">
+            <div class="col-2">For</div>
+            <div class="col-4"><input type="text" id="forUserInput" /></div>
+        </div>
+        <div class="row">
+            <div class="col-2">Message</div>
+            <div class="col-4"><input type="text" id="messageInput" value="Hello"/></div>
+        </div>
+        <div class="row">&nbsp;</div>
+        <div class="row">
+            <div class="col-6">
+                @*<input type="button" id="ConnectButton" value="Connect" />*@
+                <input type="button" id="JoinButton" value="Join Group" />
+                <input type="button" id="LeaveButton" value="Leave Group" />
+                <input type="button" id="sendButton" value="Send Message" />
+                <input type="button" id="sendGroupButton" value="Send Group Message" />
+            </div>
+        </div>
+    </div>
+<div class="row">
+    <div class="col-12">
+        <hr />
+    </div>
+</div>
+<div class="row">
+    <div class="col-6">
+        <ul id="messagesList"></ul>
+    </div>
+</div>
+<script src="~/js/signalr/dist/browser/signalr.js"></script>
+<script src="~/js/chat.js"></script>
